@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+    <title>solar-hands</title>
+
+    <style>
+    body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+    .input_video {
+            position: absolute;
+            top: 10px; /* Add spacing from the top */
+            left: 10px; /* Add spacing from the left */
+            width: 200px; /* Small size */
+            height: 150px;
+            z-index: 2; 
+            background-color: black;
+        }
+
+    .output_canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw; 
+            height: 100vh; 
+            z-index: 1; 
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+   
+    <video class="input_video"></video>
+    <canvas class="output_canvas"></canvas>
+
+   <script src="index.js"></script>
+</body>
+</html>
